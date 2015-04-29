@@ -1,0 +1,15 @@
+<div class="navbar" ng-controller="NavbarCtrl">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li><a ng-href="http://en.yueme.us">En</a></li>
+      <li><a ng-href="#" ng-show="!ifLogin()">主页</a></li>
+      <li><a ng-href="#/about" ng-show="!ifLogin()">帮助</a></li>
+      <li class="active"><a ng-href="#/login" ng-show="!ifLogin()">登录</a></li>
+      <li><a ng-href="#/searcher" ng-show="ifLogin()">发布</a></li>
+      <li><a ng-href="#/userlist" ng-show="ifLogin()">列表</a></li>
+      <li><a ng-href="#/profile" ng-show="ifLogin()">资料</a></li>
+      <li class="active"><a ng-href="#/login" ng-show="ifLogin()">登出:{{ user.name }}</a></li>
+    </ul>
+    <h3 class="text-muted">约么咱</h3>
+  </div>
+</div>

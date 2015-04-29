@@ -1,0 +1,27 @@
+<div class="userlist" ng-controller="UserlistCtrl" data-ng-init="getUserlist()">
+  <div class="col-md-12">
+    <h4>学校:{{user.school}} 专业:{{user.major}} <button class="btn btn-sm btn-success" ng-click="getUserlist()">刷新</button> </h4>
+    <div class="col-md-12">
+      <table class="table table-condensed">
+        <thead>
+        <tr>
+          <th class="col-md-1">#</th>
+          <th class="col-md-2">用户名</th>
+          <th class="col-md-2">课程</th>
+          <th class="col-md-5">留言</th>
+          <th class="col-md-2">时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in userlist track by item.index">
+          <td class="col-md-1"><button class="btn btn-xs btn-danger" ng-show="postByMyself(item.email)" ng-click="deleteByID(item.index)">删</button></td>
+          <td class="col-md-2"><img ng-src="http://www.gravatar.com/avatar/{{item.email | gravatar}}?s=20"/>{{item.name}}</td>
+          <td class="col-md-2">{{item.course}}</td>
+          <td class="col-md-5">{{item.context}}</td>
+          <td class="col-md-2">{{item.timestamp}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

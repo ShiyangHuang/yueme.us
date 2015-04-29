@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="zhaoXueBa">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <link type="text/less" rel="stylesheet" href="css/app.less.css">
+
+
+</head>
+
+<body>
+<div class="container">
+  <div ng-include="'partial/navbar/navbar.html'"></div>
+
+  <div app-view-segment="0"></div>
+
+  <div class="footer">
+    <p><span class="glyphicon glyphicon-heart"></span> <a ng-href="http://huangshiyang.com" >Huang Shiyang</a></p>
+  </div>
+</div>
+
+
+  <!-- JS from Bower components -->
+  <script class="lib" src="bower_components/jquery/dist/jquery.js"></script>
+  <script class="lib" src="bower_components/underscore/underscore.js"></script>
+  <script class="lib" src="bower_components/underscore.string/lib/underscore.string.js"></script>
+  <script class="lib" src="bower_components/moment/moment.js"></script>
+  <script class="lib" src="bower_components/angular/angular.js"></script>
+  <script class="lib" src="bower_components/angular-i18n/angular-locale_zh-cn.js"></script>
+  <script class="lib" src="bower_components/angular-animate/angular-animate.js"></script>
+  <script class="lib" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script class="lib" src="bower_components/angular-route/angular-route.js"></script>
+  <script class="lib" src="bower_components/angular-route-segment/build/angular-route-segment.js"></script>
+  <script class="lib" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script class="lib" src="bower_components/angular-ui-utils/ui-utils.js"></script>
+  <script class="lib" src="bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
+  <script class="lib" src="bower_components/angular-md5/angular-md5.js"></script>
+
+  <!-- Mocks JS -->
+  <!-- <script class="cat" src="bower_components/angular-mocks/angular-mocks.js"></script> -->
+
+  <!-- Main App JS -->
+  <script class="app" src="js/setup.js"></script>
+  <script class="app" src="js/autocomplete.js"></script>
+
+
+  <!-- Service JS -->
+  <script class="app" src="service/user.js"></script>
+  <script class="app" src="service/api.js"></script>
+  <!-- Add New Service JS Above -->
+
+  <!-- Directive JS -->
+  <!-- Add New Directive JS Above -->
+
+  <!-- Filter JS -->
+  <!-- Add New Filter JS Above -->
+
+  <!-- Partial JS -->
+  <script class="app" src="partial/homepage/homepage.js"></script>
+  <script class="app" src="partial/about/about.js"></script>
+  <script class="app" src="partial/navbar/navbar.js"></script>
+  <script class="app" src="partial/login/login.js"></script>
+  <script class="app" src="partial/register/register.js"></script>
+  <script class="app" src="partial/searcher/searcher.js"></script>
+  <script class="app" src="partial/userlist/userlist.js"></script>
+  <script class="app" src="partial/profile/profile.js"></script>
+  <!-- Add New Partial JS Above -->
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script class="dev" src="http://localhost:35729/livereload.js"></script>
+
+</body>
+
+</html>

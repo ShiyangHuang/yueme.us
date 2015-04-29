@@ -1,0 +1,20 @@
+<div class="searcher" ng-controller="SearcherCtrl" data-ng-init="setInit()">
+
+  <div class="col-md-12">
+    <div>
+      <h3>求小伙伴一起学习</h3>
+      <div class="col-md-6">
+        <h4>我在复习...</h4>
+        <div class="form-group">
+          <input class="form-control" placeholder="课程" type="text" name="name" ng-model="info.course" required>
+        </div>
+
+        <h4>还有话说</h4>
+        <textarea ng-model="info.context" name="yj" cols="40" rows="5" placeholder="(地点/教室/求带小吃/有空自习室)"></textarea>
+
+        <h3><button class="label label-success" ng-click="postText()">发布</button></h3>
+      </div>
+    </div>
+    {{ response }}
+  </div>
+</div>

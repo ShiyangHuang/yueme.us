@@ -1,0 +1,26 @@
+<div class="profile" ng-controller="ProfileCtrl"  data-ng-init="getUniversity()">
+  <form role="form" name="registerForm" ng-submit="updateProfile()" autofill-form novalidate>
+    <fieldset class="form-signin">
+      <h2 class="form-signin-heading"><img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=40"/>修改资料</h2>
+      <h4><a ng-href="http://cn.gravatar.com/emails/">修改头像(头像来自Gravatar)</a></h4>
+      <h4>{{user.email}}</h4>
+      <div class="form-group">
+        <h5>密码</h5>
+        <input class="form-control" placeholder="Password" type="password" name="password" ng-model="newuser.password">
+      </div>
+      <div class="form-group">
+        <h5>姓名 {{user.name}}</h5>
+        <input class="form-control" placeholder="姓名" type="text" name="name" ng-model="newuser.name" required>
+      </div>
+      <div class="form-group">
+        <h5>学校 {{user.school}}</h5>
+          <autocomplete ng-model="newuser.school" data="university" on-type="form-control" attr-placeholder="学校" required></autocomplete>
+        </div>
+      <div class="form-group">
+        <h5>专业 {{user.major}}</h5>
+        <autocomplete ng-model="newuser.major" data="majors" on-type="form-control" attr-placeholder="专业" required></autocomplete>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" ng-disabled="registerForm.$invalid">走着～</button>
+    </fieldset>
+  </form>
+</div>

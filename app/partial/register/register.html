@@ -1,0 +1,27 @@
+<div class="register jumbotron" ng-controller="RegisterCtrl" data-ng-init="getUniversity()">
+  <form role="form" name="registerForm" ng-submit="regist()" autofill-form novalidate>
+    <fieldset class="form-signin">
+      <h2 class="form-signin-heading">注册</h2>
+
+      <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
+        <input class="form-control" placeholder="E-mail" type="email" name="email" ng-model="user.email" required autofocus>
+        <p ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="help-block">Enter a valid email.</p>
+      </div>
+      <div class="form-group">
+        <input class="form-control" placeholder="Password" type="password" name="password" ng-model="user.password" required>
+      </div>
+      <div class="form-group">
+        <input class="form-control" placeholder="姓名" type="text" name="name" ng-model="user.name" required>
+      </div>
+      <h5>学校&专业有自动补全功能</h5><h5>如果不写全称会看不见他人发帖</h5>
+      <div class="form-group">
+        <autocomplete ng-model="user.school" data="university" on-type="form-control" attr-placeholder="学校" required></autocomplete>
+      </div>
+      <div class="form-group">
+        <autocomplete ng-model="user.major" data="majors" on-type="form-control" attr-placeholder="专业" required></autocomplete>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" ng-disabled="registerForm.$invalid">走着～</button>
+    </fieldset>
+  </form>
+  {{ info }}
+</div>

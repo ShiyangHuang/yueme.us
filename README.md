@@ -1,0 +1,3 @@
+#cantFindNameFromPackagejson
+
+>cantFindNameFromPackagejson Project
